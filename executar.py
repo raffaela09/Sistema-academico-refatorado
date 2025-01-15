@@ -1,4 +1,6 @@
-from cadastro import register_user
+from registation import register_user
+from register_class_discipline import register_class_discipline
+from validation import verification_existing, get_information
 def exibir_opcoes():
     print('''Bem vindo!! Escolha uma opção:
           1 - Cadastrar aluno.
@@ -20,12 +22,23 @@ def exibir_opcoes():
 
 #executar a função
 def executar ():
-    while True:
-        exibir_opcoes()
-        option = int(input('Digite a sua opção (em números): '))
-        if option == 1:
-            register_user(option)
-        elif option == 2:
-            register_user(option)
+     while True:
+        try:
+            exibir_opcoes()
+            option = int(input('Digite a sua opção (em números): '))
+            if option == 1:
+                print('Cadastro de aluno:')
+                register_user(option, verification_existing, get_information)
+            elif option == 2:
+                print('Cadastro de professor:')
+                register_user(option, verification_existing, get_information)
+            elif option == 3:
+                print('Cadastro de disciplina:')
+                register_class_discipline(option, verification_existing, get_information)
+            elif option == 4:
+                print('Cadastro de turma:')
+                register_class_discipline(option, verification_existing, get_information)
+        except:
+            print('Ocorreu um erro inesperado, tente novamente...')
     
 executar()
