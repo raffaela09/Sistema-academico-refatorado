@@ -22,3 +22,4 @@ def get_information(option):
     elif option == 4:
         discipline_class = input('Disciplina: ')
         return discipline_class
+    

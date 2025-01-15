@@ -25,23 +25,23 @@ def register_class_discipline (option, verification_existing, get_information):
     get_information_data = get_information(option)
 
     if option == 3:
-        classroom[code_discipline_class]= {
+        discipline[code_discipline_class] =  {
             'name': name_discipline_class,
             'code': code_discipline_class,
-            'teacher': teacher_discipline_class,
+            'teacher': [teacher_discipline_class],
             'workload': get_information_data, 
         }
-        print(f'A disciplina {name_discipline_class} foi cadastrada com sucesso!')
-        return classroom 
+        print(discipline)
+        return discipline
     elif option == 4:
-        discipline[code_discipline_class] = {
+        classroom[code_discipline_class]={
             'name': name_discipline_class,
             'code': code_discipline_class,
-            'teacher': teacher_discipline_class,
-            'discipline': get_information_data,
+            'teacher': [teacher_discipline_class],
+            'discipline': [get_information_data],
         }
-        print(f'A turma {name_discipline_class} foi cadastrada com sucesso!')
-        return discipline
+        print(classroom)
+        return classroom
 #----------------------------------------------
 
 
