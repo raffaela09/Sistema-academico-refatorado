@@ -11,6 +11,7 @@ def verification_existing(code_discipline_class, registration_user):
 
 #Função responsavel por verificar qual cadastro é e informar o campo adicional desse cadastro
 def get_information(option):
+#mudar para match case 
     if option == 2:
         disciplines_user = input('Digite as suas disciplinas separadas por virgulas: ').split(',')
         return disciplines_user
